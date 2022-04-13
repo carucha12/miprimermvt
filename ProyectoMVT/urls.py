@@ -15,6 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from mimvt.views import saluda
 from mimvt.views import familiar
 from mimvt.views import  profesion
 
@@ -26,6 +27,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('familiar/<nombre>/<apellido>/<dni>', familiar),
     path('profesion/<profesion>/', profesion),
+    path('inicio/', saluda),
     
     
 ]
